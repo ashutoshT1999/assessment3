@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-center box"  style="margin-top:90px ;">
+    <mat-card class="example-card">
+        <label style="font-size: 30px ;padding-bottom: 20px;">Extented Information</label>
+        <mat-divider></mat-divider>
+        <div class="d-flex justify-content-around flex-column mt-2">
+            <ng-container *ngFor="let emp of empbyid">
+                <mat-card-title class="mb-3 p-2">Code : <span style="font-weight: normal ;">{{emp.code}}</span>
+                </mat-card-title>
+                <mat-card-title class="mb-3 p-2">Fullname : <span style="font-weight: normal ;">{{emp.firstname+'
+                        '+emp.middlename+' '+emp.lastname}}</span>
+                </mat-card-title>
+                <mat-card-title class="mb-3 p-2">Department : <span style="font-weight: normal ;">{{emp.email}}</span>
+                </mat-card-title>
+                <mat-card-title class="mb-3 p-2">Contact : <span
+                        style="font-weight: normal ;">{{emp.contactnumber}}</span>
+                </mat-card-title>
+                <mat-card-title class="mb-3 p-2">Pincode : <span style="font-weight: normal ;">{{emp.pincode}}</span>
+                </mat-card-title>
+                <mat-card-title class="mb-3 p-2">Gender : <span style="font-weight: normal ;">{{emp.gender}}</span>
+                </mat-card-title>
+                <mat-card-title class="mb-3 p-2">Employee Type : <span style="font-weight: normal ;">{{emp.employeetype}}</span>
+                </mat-card-title>
+                <button type="button" class="btn btn-outline-info" [routerLink]="['/emptable']">Back to
+                    list</button>
+            </ng-container>
+        </div>
+    </mat-card>
+</div>
